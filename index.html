@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Type Sprint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Type Sprint</h1>
+      <div class="durations" role="group" aria-label="Test length">
+        <button data-seconds="15">15s</button>
+        <button data-seconds="30" class="active">30s</button>
+        <button data-seconds="60">60s</button>
+      </div>
+    </header>
+
+    <div class="stats">
+      <div><span id="time">30</span><small>seconds</small></div>
+      <div><span id="wpm">0</span><small>wpm</small></div>
+      <div><span id="accuracy">100</span><small>% accuracy</small></div>
+    </div>
+
+    <div id="words" aria-hidden="true"></div>
+
+    <input id="input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+           placeholder="Start typing to begin…" aria-label="Type the words shown">
+
+    <div id="result" hidden>
+      <p id="result-text"></p>
+      <p id="best"></p>
+    </div>
+
+    <button id="restart">Restart <kbd>Esc</kbd></button>
+  </main>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
